@@ -18,14 +18,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMP_DIR = os.path.join(BASE_DIR, "templates")
 
 ROOT_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
-APPS_DIR = ROOT_DIR / "files"  # Main Django App Folder Name
+APPS_DIR = BASE_DIR + "/files"  # Main Django App Folder Name
 
-STATIC_ROOT = str(ROOT_DIR / "staticfiles")
+STATIC_ROOT = str(BASE_DIR + "/staticfiles")
 
 STATIC_URL = "/static/"
 
 STATICFILES_DIRS = [
-    str(APPS_DIR / "static"),
+    str(APPS_DIR + "/static"),
 ]
 
 STATIC_ROOT = "/static/"
@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "files",
+    "django.forms",
 ]
 
 MIDDLEWARE = [
