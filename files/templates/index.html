@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alumni Nexus</title>
+    <link rel="stylesheet" href="{% static "style.css" %}"/>
+
+    <link rel="icon" href="{% static 'icon.png' %}" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="headerleft">
+        <img src="{% static 'icon.png' %}" />
+        <p>Alumni Nexus</p>
+      </div>
+      <div class="headerright">
+        <img
+          src="{% static 'grip.png' %}"
+          class="grip"
+          id="menuopen"
+          onclick="menuopenclose()"
+        />
+        <ul class="menu">
+          <a href="../"> <li>Home</li></a>
+          <a href="../signup"><li>Add Details</li></a>
+          <a href="../details"><li>Check Details</li></a>
+          <a href="../"><li>News And Events</li></a>
+
+          <a href="../"><li>Contact Us</li></a>
+        </ul>
+      </div>
+    </div>
+    <div class="menumobile" id="mobmenu">
+      <ul class="menumob">
+        <a href="../"> <li>Home</li></a>
+        <hr class="menumobline" />
+        <a href="../signup"><li>Add Details</li></a>
+        <hr class="menumobline" />
+        <a href="../details"><li>Check Details</li></a>
+        <hr class="menumobline" />
+        <a href="../"><li>News And Events</li></a>
+        <hr class="menumobline" />
+        <a href="../"><li>Contact Us</li></a>
+      </ul>
+    </div>
+    <div class="main">{% block content %} {% endblock %}</div>
+    <div class="footer">
+      <p>Contact Us at +12131123</p>
+
+      <p>Mail Us at abcd@college.com</p>
+      <img src="{% static 'instagram.png' %}" />
+    </div>
+
+    <script src="{% static 'script.js' %}"></script>
+  </body>
+</html>
