@@ -16,12 +16,23 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMP_DIR = os.path.join(BASE_DIR, "templates")
+
+ROOT_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
+APPS_DIR = ROOT_DIR / "files"  # Main Django App Folder Name
+
+STATIC_ROOT = str(ROOT_DIR / "staticfiles")
+
+STATIC_URL = "/static/"
+
 STATICFILES_DIRS = [
-    BASE_DIR + "/static",
-    "/files/static/",
+    str(APPS_DIR / "static"),
 ]
 
-STATIC_ROOT = "files/static"
+STATIC_ROOT = "/static/"
+STATICFILES_FINDERS = [
+    "django.contrib.staticfiles.finders.FileSystemFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+]
 
 
 # Quick-start development settings - unsuitable for production
@@ -90,6 +101,7 @@ DATABASES = {
         "NAME": BASE_DIR + "/db.sqlite3",
     }
 }
+from .db import *
 
 
 # Password validation
@@ -126,7 +138,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = "static/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
