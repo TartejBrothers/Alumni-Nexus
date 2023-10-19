@@ -1,0 +1,81 @@
+{% extends "index.html" %} {% block content %}
+<style>
+  .newsbody {
+    width: 100%;
+    padding: 20px;
+  }
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .headernews h2 {
+    color: #ffffff;
+  }
+  .headernews {
+    border-radius: 20px;
+    background-color: #000000;
+    padding: 20px;
+  }
+  .content {
+    background-color: #ff8e3c;
+    border-radius: 20px;
+    margin-top: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+  }
+  .content p {
+    font-size: 20px;
+  }
+  button {
+    background-color: #000000;
+    border: none;
+    color: #ffffff;
+    width: 60%;
+    margin: 20px auto;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 20px;
+  }
+</style>
+<h1>News And Events</h1>
+<div class="newsbody">
+  <div class="headernews">
+    <h2>Event By 2020 Batch</h2>
+  </div>
+  <div class="content">
+    <p>Event Name: 2020 Reuninion</p>
+    <p>Event Date: 2024-1-12</p>
+    <p>Event Time: 12:00 PM</p>
+    <p>Event Venue: College Campus</p>
+    <p>Event Description: This is the event for 2020 batch students</p>
+    <p>Event Status: Active</p>
+    <p>Event Created Date: 2023-1-12</p>
+    <p>Event Created Time: 12:00 PM</p>
+    <p>Event Created By: Lakshay (2020 Batch)</p>
+    <button>Register</button>
+  </div>
+</div>
+<div class="newsbody">
+  <div class="headernews">
+    <h2>Webinar For Web Development</h2>
+  </div>
+  <div class="content">
+    <p>Event Name: Web-Inar</p>
+    <p>Event Date: 2023-11-12</p>
+    <p>Event Time: 7:00 PM</p>
+    <p>Event Venue: Online</p>
+    <p>
+      Event Description: We will teaching about the basics of web development in
+      this Webinar and will learn about frameworks such as Django.
+    </p>
+    <p>Event Status: Active</p>
+    <p>Event Created Date: 2023-1-12</p>
+    <p>Event Created Time: 3:00PM</p>
+    <p>Event Created By: Naman(2015 Batch)</p>
+    <button>Register</button>
+  </div>
+</div>
+{% endblock %}

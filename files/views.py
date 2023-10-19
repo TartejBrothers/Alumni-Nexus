@@ -27,3 +27,7 @@ def signup(request):
 def items(request):
     alumni = Alumni.objects.all()
     return render(request, "details.html", {"alumni": alumni})
+
+
+def news(request):
+    return render(request, "news.html")

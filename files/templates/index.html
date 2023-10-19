@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="{% static "style.css" %}"/>
 
     <link rel="icon" href="{% static 'icon.png' %}" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
   </head>
   <body>
     <div class="header">
@@ -26,9 +31,9 @@
           <a href="../"> <li>Home</li></a>
           <a href="../signup"><li>Add Details</li></a>
           <a href="../details"><li>Check Details</li></a>
-          <a href="../"><li>News And Events</li></a>
+          <a href="../news"><li>News And Events</li></a>
 
-          <a href="../"><li>Contact Us</li></a>
+          <a href="#contact"><li>Contact Us</li></a>
         </ul>
       </div>
     </div>
@@ -40,13 +45,13 @@
         <hr class="menumobline" />
         <a href="../details"><li>Check Details</li></a>
         <hr class="menumobline" />
-        <a href="../"><li>News And Events</li></a>
+        <a href="../news"><li>News And Events</li></a>
         <hr class="menumobline" />
-        <a href="../"><li>Contact Us</li></a>
+        <a href="#contact"><li>Contact Us</li></a>
       </ul>
     </div>
     <div class="main">{% block content %} {% endblock %}</div>
-    <div class="footer">
+    <div class="footer" id="contact">
       <p>Contact Us at +12131123</p>
 
       <p>Mail Us at abcd@college.com</p>

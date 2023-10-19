@@ -8,24 +8,36 @@
       justify-content: center;
     }
     form {
-      width: 100%;
+      width: 60%;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
       padding: 20px;
+      border: 1px solid #000000;
+      border-radius: 20px;
     }
     form input {
       border-radius: 10px;
+      width: 100%;
     }
     #savebutton {
-      width: 20%;
       border: none;
       background-color: #ff8e3c;
       padding: 10px;
       border-radius: 20px;
       font-size: 20px;
+      margin: 10px auto;
       min-width: 200px;
+    }
+    .main {
+      height: 100vh;
+
+      max-height: calc(100vh - 250px);
+    }
+    @media screen and (max-width: 1000px) {
+      form {
+        width: 90%;
+      }
     }
   </style>
 </head>
