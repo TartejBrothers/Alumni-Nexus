@@ -20,6 +20,7 @@ def signup(request):
     if form.is_valid():
         form.save()
         form = add_data()
+        return HttpResponseRedirect("../details/")
     dict5 = {"form": form}
     return render(request, "signup.html", dict5)
 
