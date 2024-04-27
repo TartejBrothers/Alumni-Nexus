@@ -4,8 +4,6 @@ from django.template import loader
 from .form import add_data
 from .models import Alumni
 
-# Create your views here.
-
 
 def home(request):
     return render(request, "index.html")

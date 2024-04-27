@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,300;1,400&display=swap");
 html {
   scroll-behavior: smooth;
+  background-color: #000;
 }
 * {
   margin: 0;
@@ -9,6 +10,7 @@ html {
   font-family: "Poppins", sans-serif;
 }
 body {
+  background-color: #000;
   width: 100%;
   height: 100%;
   overflow-x: hidden;
